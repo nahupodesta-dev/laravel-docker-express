@@ -1,0 +1,42 @@
+version: '3.8'
+
+# Configuración específica para escalado
+# Uso: docker-compose -f docker-compose.yml -f docker-compose.scale.yml up -d
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: dockerfile.php
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          memory: 256M
+
+  webserver:
+    image: nginx:alpine
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: '0.3'
+          memory: 256M
+        reservations:
+          memory: 128M
+
+  # Load balancer para múltiples instancias de nginx
+  load-balancer:
+    image: nginx:alpine
+    container_name: ${COMPOSE_PROJECT_NAME:-laravel-app}_load_balancer
+    ports:
+      - "${HTTP_PORT:-9001}:80"
+    volumes:
+      - ./docker/nginx/load-balancer.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - webserver
+    networks:
+      - laravel 

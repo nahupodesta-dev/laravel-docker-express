@@ -1,0 +1,13 @@
+upload_max_filesize=${PHP_UPLOAD_MAX_FILESIZE:-40M}
+post_max_size=${PHP_POST_MAX_SIZE:-40M}
+memory_limit=${PHP_MEMORY_LIMIT:-512M}
+max_execution_time=${PHP_MAX_EXECUTION_TIME:-600}
+max_input_vars=${PHP_MAX_INPUT_VARS:-3000}
+
+; Configuraciones adicionales para escalabilidad
+opcache.enable=1
+opcache.memory_consumption=128
+opcache.interned_strings_buffer=8
+opcache.max_accelerated_files=4000
+opcache.revalidate_freq=2
+opcache.fast_shutdown=1 

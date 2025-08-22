@@ -1,0 +1,41 @@
+# Proyectos Laravel creados por el instalador
+# Ignorar la carpeta projects y todos los directorios que contengan proyectos Laravel
+projects/
+*/
+
+# Excepciones - mantener archivos de configuración del template
+!docker/
+!docker-compose*.yml
+!dockerfile.php
+!install.sh
+!.env.example
+!README.md
+!LICENSE
+!*.md
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Archivos de configuración local
+.env
+.env.local
+.env.*.local
+
+# Directorios de caché
+.cache/
+.temp/
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos de backup
+*.bak
+*.backup 
