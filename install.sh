@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # 🐳 Script de instalación automática para Laravel con Docker
+# 👨‍💻 Autor: nahupodesta-dev
 # Uso: ./install.sh [nombre-del-proyecto]
 
 set -e
@@ -369,8 +370,12 @@ main() {
     local project_name=${1:-"laravel-project"}
     local enable_scale=${2:-"false"}
     
-    echo "🐳 Instalador automático de Laravel con Docker"
-    echo "=============================================="
+    echo
+    echo "╔══════════════════════════════════════════════════════════════╗"
+    echo "║                                                              ║"
+    echo "║  🐳 Laravel Docker Express (nahupodesta-dev) 🐳              ║"
+    echo "║                                                              ║"
+    echo "╚══════════════════════════════════════════════════════════════╝"
     echo
     
     check_docker
