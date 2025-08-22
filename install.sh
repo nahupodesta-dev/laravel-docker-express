@@ -363,6 +363,7 @@ show_final_info() {
     echo
     echo "📖 Para más información, consulta el README.md"
     echo
+    echo " NAHTA - nahupodesta-dev "
 }
 
 # Función principal
