@@ -286,11 +286,6 @@ cd laravel-docker-express
 - 🔌 **Puertos configurables** y mostrados al final
 - 🎯 **Proyectos independientes** sin interferencia del template
 
-## 🙏 Agradecimientos
-
-Gracias a la comunidad de desarrolladores por inspirar este proyecto.
-Espero que este template ayude a otros desarrolladores a configurar sus entornos Laravel de manera rápida y eficiente.
-
----
+## 🙏 NAHTA 🙏
 
 **¡Happy coding! 🚀** 
